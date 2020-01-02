@@ -1,9 +1,9 @@
 from src.Db_connection import db_connection
 
 
-def insert_student(sclass, saddress, srno, sfee):
+def insert_student(student_class, saddress, srno, sfee):
     sql_statement = "Insert Into Student VALUES (%s,%s,%s,%s)"
-    values = (srno, sclass, saddress, sfee)
+    values = (srno, student_class, saddress, sfee)
     db_connection.cur.execute(sql_statement, values)
     db_connection.conn.commit()
     print("Detail Saved Sucessfully!!!")
