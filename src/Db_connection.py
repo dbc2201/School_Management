@@ -3,4 +3,4 @@ class DatabaseConnection:
     conn = mc.connect(host="localhost", user="root", passwd="", database="Management")
     cur = conn.cursor()
     if cur:
-        print("Connected Sucessfully.....")
+        print("Connected Successfully!")
