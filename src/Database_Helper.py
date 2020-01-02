@@ -1,6 +1,5 @@
 from src.Db_connection import db_connection
 
-
 def insert_student(student_class, student_address, student_roll_number, student_fees):
     sql_statement = "Insert Into Student VALUES (%s,%s,%s,%s)"
     values = (student_roll_number, student_class, student_address, student_fees)
