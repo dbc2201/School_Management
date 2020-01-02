@@ -4,3 +4,5 @@ class DatabaseConnection:
     cur = conn.cursor()
     if cur:
         print("Connected Successfully!")
+    else:
+        print("Connection failed!")
