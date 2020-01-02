@@ -1,7 +1,7 @@
 from src.Db_connection import db_connection
 
 
-def insertStudent(sclass, saddress, srno, sfee):
+def insert_student(sclass, saddress, srno, sfee):
     sql_statement = "Insert Into Student VALUES (%s,%s,%s,%s)"
     values = (srno, sclass, saddress, sfee)
     db_connection.cur.execute(sql_statement, values)
@@ -20,7 +20,7 @@ def viewStudent(srno):
 
 def updateStudent(sclass, saddress, srno, sfee):
     sql_statement = "UPDATE Student SET Address=%s,Class=%s,Fees=%s where RollNo=%s"
-    sc = (saddress, sclass, sfee, srno, )
+    sc = (saddress, sclass, sfee, srno,)
     db_connection.cur.execute(sql_statement, sc)
     db_connection.conn.commit()
     print("Detail Updated Sucessfully!!!")
@@ -53,7 +53,7 @@ def viewEmployee(eid):
 
 def updateEmployee(ename, edept, eid):
     sql_statement = "UPDATE Employee SET ename=%s,edept=%s where eid=%s"
-    sc = (ename, edept, eid, )
+    sc = (ename, edept, eid,)
     db_connection.cur.execute(sql_statement, sc)
     db_connection.conn.commit()
     print("Detail Updated Sucessfully!!!")

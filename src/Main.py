@@ -1,6 +1,6 @@
 
 while True:
-    from src.Database_Helper import insertStudent, deleteStudent, updateStudent, viewStudent, insertEmployee, \
+    from src.Database_Helper import insert_student, deleteStudent, updateStudent, viewStudent, insertEmployee, \
         deleteEmployee, updateEmployee, viewEmployee
     from src.Db_connection import db_connection
     print("_______________________________SCHOOL MANAGEMENT SYSTEM_______________________________")
@@ -14,7 +14,7 @@ while True:
             sclass = int(input("enter Class: "))
             saddress = input("Enter Address: ")
             sfee = int(input("Enter amount of fees deposited: "))
-            insertStudent(sclass, saddress, srno, sfee)
+            insert_student(sclass, saddress, srno, sfee)
         elif b == 2:
             srno = input("Enter Roll No. of student you want to delete: ")
             deleteStudent(srno)
